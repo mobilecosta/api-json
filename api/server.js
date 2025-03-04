@@ -20,7 +20,7 @@ server.use(jsonServer.rewriter({
 }))
 
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://front-portal-wagner-mobile-costas-projects.vercel.app/')
+  res.header('Access-Control-Allow-Origin', 'https://front-portal-wagner-mobile-costas-projects.vercel.app')
   res.header('Access-Control-Allow-Headers', '*')  
   next();
 })
