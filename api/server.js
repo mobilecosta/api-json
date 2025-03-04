@@ -18,6 +18,12 @@ server.use(middlewares)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1'
 }))
+
+server.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  next();
+})
+
 server.use(router)
 server.listen(3000, () => {
     console.log('Api Json')
